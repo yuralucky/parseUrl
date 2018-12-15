@@ -13,14 +13,6 @@ namespace Project1;
  * Class Parser
  * @package Project1
  */
-/**
- * Class Parser
- * @package Project1
- */
-/**
- * Class Parser
- * @package Project1
- */
 class Parser
 {
     /**
@@ -33,97 +25,106 @@ class Parser
      */
     public $file;
 
+    /**
+     * @var string
+     */
+    public $domain;
+
 
     /**
-     * @param $url
+     * @return string
      */
-    public function parseImage($url, $file)
-    {
-        $content = file_get_contents($url, false);
-        preg_match_all('/<img[^>]+>/i', $content, $result);
-        foreach ($result[0] as $img_tag) {
-            preg_match_all('/(src)=("[^"]*")/i', $img_tag, $img, PREG_SET_ORDER);
-            $this->saveImageUrl($file, $img);
-        }
 
+//    public function __construct($url)
+//    {
+//        $this->url = $this->check($url);
+//    }
+
+    public function getDomain($url)
+    {
+        $this->domain = parse_url($this->check($url), PHP_URL_HOST);
+        return $this->domain;
     }
 
+
+
     /**
-     * @param $content
+     *
      * @param $url
+     *
+     * This method save all url csv-file
      */
-    public function parseUrl($url)
+    public function saveParseUrl($url)
     {
         $content = file_get_contents($url, false);
         preg_match_all('/<a href=[\"|\'](.*?)[\"|\']/is', $content, $links, PREG_SET_ORDER);
-        foreach ($links as $link) {
-            if ($link !== false) {
-                $this->saveDataCsv($link);
+        if (is_array($links)) {
+            $handler = fopen("result/{$this->name($url)}.csv", 'a');
+            fputcsv($handler, str_split('Url '));
+
+            foreach ($links as $item) {
+                fputcsv($handler, $item, ';');
             }
+            fclose($handler);
         }
+        return "result/{$this->name($url)}.csv";
 
     }
 
     /**
-     * @param $data
+     * @param $url
+     *
+     * This method save all image csv-file
      */
-    public function saveDataCsv($data)
+    public function saveParseImageUrl($url)
     {
+        $data = $this->getContent($this->check($url));
+        preg_match_all('/(src)=("[^"]*")/i', $data, $img, PREG_SET_ORDER);
 
-        $handler = fopen('two.csv', 'w');
-        foreach ($data as $item) {
-            fputcsv($handler, $item, ';');
+
+        if (is_array($img)) {
+            $handler = fopen("result/{$this->name($url)}.csv", 'a');
+            fputcsv($handler, str_split('Image '));
+
+            foreach ($img as $item) {
+                fputcsv($handler, $item, ';');
+            }
+            fclose($handler);
         }
-        fclose($handler);
+        return "result/{$this->name($url)}.csv";
     }
 
-
-    /**
-     * @param string $file
-     * @param array $images
-     */
-    public function saveImageUrl(string $file, array $images)
+    public function name($url)
     {
-        $g = fopen($this->file, 'w');
-        foreach ($images as $image) {
-            if (!empty($image)) {
+        $validFilename = str_replace('.', '_', $this->getDomain($url));
+        return $validFilename;
 
-                fputcsv($g, $image, ";");
-            }
-        }
-        fclose($g);
-    }
-
-    public function showResulCsv($file)
-    {
-        $row = 1;
-        if (($g = fopen($this->file, 'r')) !== false) {
-            while (($data = fgetcsv($g, 10000, ',')) !== false) {
-                $num = count($data);
-
-            }
-        }
-        return $num;
     }
 
 
     /**
      * @param $url
+     * @return string
      */
-    function getContent($url='https://football.ua')
+    public function check($url)
     {
-        $content = file_get_contents($url, false);
-
-
+        return strpos($url, 'http') === false ? "http://{$url}" : $url;
     }
 
 
+    /**
+     * @param $url
+     *
+     * return content for parse
+     */
+
+    function getContent($url)
+    {
+        return file_get_contents($url, false);
+    }
 }
 
-$obj = new Parser();
-//$show = $obj->parseImage('https://football.ua','one.csv');
-//$obj->showResulCsv('one.csv');
-
 //$obj = new Parser();
-
-$obj->parseUrl('https://football.ua');
+//$t = $obj->saveImageUrl('http://dumskaya.net');
+//
+//echo $t;
