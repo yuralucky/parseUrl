@@ -34,15 +34,16 @@ class Parser
      */
     public $filename;
 
-    /**
-     * @return string
-     */
 
+    /**
+     * Parser constructor.
+     * @param $url
+     */
     public function __construct($url)
     {
         $this->url = $this->check($url);
         $this->domain = $this->getDomain($url);
-        $this->data = $this->getContent($url);
+        $this->data = $this->getContent();
         $this->filename = str_replace('.', '_', $this->domain);
     }
 
@@ -67,20 +68,17 @@ class Parser
 
 
     /**
-     * @param $url
      * @return bool|string
-     *
-     *
      */
     function getContent()
     {
         return file_get_contents($this->url, false);
     }
 
-
     /**
-     * @param $url
      * @return string
+     *
+     * parse and save all links
      */
     public function saveParseUrl()
     {
@@ -101,8 +99,9 @@ class Parser
 
 
     /**
-     * @param $url
      * @return string
+     *
+     * parse and save all image
      */
     public function saveParseImageUrl()
     {

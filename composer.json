@@ -1,0 +1,15 @@
+{
+    "name": "yura/project1",
+    "description": "App parse input url and save all images and links",
+    "type": "project",
+    "authors": [
+        {
+            "name": "yura",
+            "email": "yuralucky83@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {"Project1\\": "app/"}
+    }
+}
