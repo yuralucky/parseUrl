@@ -1,6 +1,6 @@
 {
     "name": "yura/project1",
-    "description": "App parse input url and save all images and links",
+    "description": "App parse input url and save all images and links into csv file",
     "type": "project",
     "authors": [
         {
@@ -8,8 +8,11 @@
             "email": "yuralucky83@gmail.com"
         }
     ],
-    "require": {},
+    "require": {
+        "phpunit/phpunit": "^7.5"
+
+    },
     "autoload": {
-        "psr-4": {"Project1\\": "app/"}
+        "psr-4": {"Project\\": "app/"}
     }
 }

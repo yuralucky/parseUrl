@@ -8,11 +8,16 @@
 
 namespace Project1;
 
-require __DIR__ . '/../vendor/autoload.php';
+use Project\Parser;
+use Project\ShowReport;
 
 class Commander
 {
-    function __construct($option)
+    /**
+     * Commander constructor.
+     * @param $option
+     */
+    function __construct($option='https://dumskaya.net')
     {
         switch (key($option)) {
 
@@ -38,4 +43,4 @@ To display information in cli, enter php src / Commander.php --report <your reso
 }
 
 $option = getopt("p:r:h", ["parse:", "report:", "help:"]);
-new Commander($option);
+//new Commander($option);

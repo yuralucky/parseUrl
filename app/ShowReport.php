@@ -6,9 +6,10 @@
  * Time: 16:35
  */
 
-namespace Project1;
+namespace Project;
+use Project\CheckUrl;
 
-class ShowReport
+class ShowReport    implements CheckUrl
 {
 
     /**
@@ -50,6 +51,10 @@ class ShowReport
                 }
             }
         }
+        else {
+            print 'This url not  parse . Enter command --parse your url';
+            exit();
+        }
         fclose($handle);
         return 'The end';
     }
@@ -60,7 +65,7 @@ class ShowReport
      */
     public function check($url)
     {
-        return strpos($url, 'http') === false ? "http://{$url}" : $url;
+        return strpos($url, 'http') === false ? "https://{$url}" : $url;
     }
 
     /**
@@ -73,6 +78,5 @@ class ShowReport
     }
 
 }
-
 
 

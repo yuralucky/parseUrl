@@ -6,13 +6,16 @@
  * Time: 9:29
  */
 
-namespace Project1;
+namespace Project;
+
+use Project\CheckUrl;
 
 /**
  * Class Parser
  * @package Project1
  */
 class Parser
+//    implements CheckUrl
 {
 
     /**
@@ -54,7 +57,7 @@ class Parser
      */
     public function check($url)
     {
-        return strpos($url, 'http') === false ? "http://{$url}" : $url;
+        return strpos($url, 'http') === false ? "https://{$url}" : $url;
     }
 
     /**
@@ -82,14 +85,14 @@ class Parser
      */
     public function saveParseUrl()
     {
-        preg_match_all('/<a href=[\"|\'](.*?)[\"|\']/is', $this->data, $links, PREG_SET_ORDER);
+        preg_match_all('#((http(s)?(\:\/\/))+(www\.)?([\w\-\.\/])*(\.[a-zA-Z]{2,3}\/?))[^\s\b\n|]*[^.,;:\?\!\@\^\$ -]#', $this->data, $links, PREG_SET_ORDER);
 
         if (is_array($links)) {
             $handler = fopen("result/" . "{$this->filename}" . ".csv", 'a');
-            fputcsv($handler, str_split('Url '));
+            fputcsv($handler, array('Url:'));
 
             foreach ($links as $item) {
-                fputcsv($handler, $item, ';');
+                fputcsv($handler, array($item[1]), ';');
             }
             fclose($handler);
         }
@@ -105,15 +108,16 @@ class Parser
      */
     public function saveParseImageUrl()
     {
-        preg_match_all('/(src)=("[^"]*")/i', $this->data, $img, PREG_SET_ORDER);
+        preg_match_all('~(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)~', $this->data, $img);
 
         if (is_array($img)) {
-            $handler = fopen("result/" ."{$this->filename}" . ".csv", 'a');
+            $handler = fopen("result/" . "{$this->filename}" . ".csv", 'a');
             fputcsv($handler, array('Image :'));
 
-            foreach ($img as $item) {
-                fputcsv($handler, $item, ';');
-            }
+            foreach ($img[0] as $item) {
+                fputcsv($handler, array($item), ';');
+            };
+
             fclose($handler);
         }
         return "result/" . "{$this->filename}" . ".csv";
@@ -121,3 +125,5 @@ class Parser
 
 }
 
+$obj = new Parser('https://football.ua');
+$obj->saveParseUrl();
