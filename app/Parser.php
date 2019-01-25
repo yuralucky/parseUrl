@@ -12,9 +12,9 @@ namespace Project1;
  * Class Parser
  * @package Project1
  */
-class Parser implements CheckUrl
+class Parser
 {
-
+    use CheckDomain;
     /**
      * @var string
      */
@@ -47,27 +47,8 @@ class Parser implements CheckUrl
         $this->filename = str_replace('.', '_', $this->domain);
     }
 
-
     /**
-     * @param $url
-     * @return string
-     */
-    public function check($url)
-    {
-        return strpos($url, 'http') === false ? "https://{$url}" : $url;
-    }
-
-    /**
-     * @param $url
-     * @return mixed
-     */
-    public function getDomain($url)
-    {
-        return $this->domain = parse_url($this->check($url), PHP_URL_HOST);
-    }
-
-
-    /**
+     *
      * @return bool|string
      */
     function getContent()
@@ -86,7 +67,7 @@ class Parser implements CheckUrl
 
         if (is_array($links)) {
             $handler = fopen("result/" . "{$this->filename}" . ".csv", 'a');
-            fputcsv($handler, array('Url:******'));
+            fputcsv($handler, array('Url:******'),';');
 
             foreach ($links as $item) {
                 fputcsv($handler, array($item[1]), ';');
@@ -109,7 +90,7 @@ class Parser implements CheckUrl
 
         if (is_array($img)) {
             $handler = fopen("result/" . "{$this->filename}" . ".csv", 'a');
-            fputcsv($handler, array('Image :*********'));
+            fputcsv($handler, array('Image :*********'),';');
 
             foreach ($img[0] as $item) {
                 fputcsv($handler, array($item), ';');

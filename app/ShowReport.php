@@ -8,8 +8,9 @@
 
 namespace Project1;
 
-class ShowReport  implements CheckUrl
+class ShowReport
 {
+    use CheckDomain;
 
     /**
      * @var string
@@ -58,23 +59,6 @@ class ShowReport  implements CheckUrl
         return '********The end';
     }
 
-    /**
-     * @param $url
-     * @return string
-     */
-    public function check($url)
-    {
-        return strpos($url, 'http') === false ? "https://{$url}" : $url;
-    }
-
-    /**
-     * @param $url
-     * @return mixed|string
-     */
-    public function getDomain($url)
-    {
-        return $this->domain = parse_url($this->check($url), PHP_URL_HOST);
-    }
 
 }
 

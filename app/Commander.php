@@ -22,7 +22,7 @@ class Commander
             case "parse":
                 $obj = new Parser($option['parse']);
                 $obj->saveParseImageUrl();
-                $obj->saveParseUrl();
+                echo $obj->saveParseUrl();
                 break;
 
             case "report":
