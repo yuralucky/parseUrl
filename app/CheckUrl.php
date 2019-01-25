@@ -6,7 +6,7 @@
  * Time: 15:59
  */
 
-namespace Project;
+namespace Project1;
 
 
 interface CheckUrl

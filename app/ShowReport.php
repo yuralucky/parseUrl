@@ -6,10 +6,9 @@
  * Time: 16:35
  */
 
-namespace Project;
-use Project\CheckUrl;
+namespace Project1;
 
-class ShowReport    implements CheckUrl
+class ShowReport  implements CheckUrl
 {
 
     /**
@@ -52,11 +51,11 @@ class ShowReport    implements CheckUrl
             }
         }
         else {
-            print 'This url not  parse . Enter command --parse your url';
+            print 'This url not  parse . Enter command --parse <your url>';
             exit();
         }
         fclose($handle);
-        return 'The end';
+        return '********The end';
     }
 
     /**

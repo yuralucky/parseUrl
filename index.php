@@ -1,8 +1,8 @@
 <?php
 
-require_once __DIR__.'/vendor/autoload.php';
-use Project\Commander;
+use Project1\Commander;
 
+require_once __DIR__ . '/vendor/autoload.php';
+$option = getopt('h', ['parse:', 'report:', 'help:']);
 
-$option ='https://php.net';
-$start=new Commander($option);
+$start = new Commander($option);

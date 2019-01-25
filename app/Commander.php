@@ -8,16 +8,13 @@
 
 namespace Project1;
 
-use Project\Parser;
-use Project\ShowReport;
-
 class Commander
 {
     /**
      * Commander constructor.
      * @param $option
      */
-    function __construct($option='https://dumskaya.net')
+    function __construct($option)
     {
         switch (key($option)) {
 
@@ -35,12 +32,10 @@ class Commander
 
             case "help" || "h":
             default:
-                echo 'Hey. To parse any resource in cli, enter php src / Commander.php --parse <your resource>.
-To display information in cli, enter php src / Commander.php --report <your resource>';
+                echo 'Hi. To parse any resource in cli, enter php index.php --parse <your resource>.
+                        To display information in cli, enter php index.php --report <your resource>';
         }
     }
 
 }
 
-$option = getopt("p:r:h", ["parse:", "report:", "help:"]);
-//new Commander($option);

@@ -1,5 +1,6 @@
 # parseUrl
 Приложение парсит ресурсы и сохраняет результаты в csv-файл.
-Для запуска приложения наберите php app/Commander.php --parse <ваш ресурс>
-Для просмотра результата введите php app/Commander.php --report <ваш ресурс>
-Для справки php app/Commander.php --help или -h
+Для запуска приложения наберите php index.php --parse <**ваш ресурс**>
+Для просмотра результата введите php index.php --report <**ваш ресурс**>
+Для справки php index.php --help или -h
+****

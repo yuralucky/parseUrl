@@ -6,16 +6,13 @@
  * Time: 9:29
  */
 
-namespace Project;
-
-use Project\CheckUrl;
+namespace Project1;
 
 /**
  * Class Parser
  * @package Project1
  */
-class Parser
-//    implements CheckUrl
+class Parser implements CheckUrl
 {
 
     /**
@@ -89,7 +86,7 @@ class Parser
 
         if (is_array($links)) {
             $handler = fopen("result/" . "{$this->filename}" . ".csv", 'a');
-            fputcsv($handler, array('Url:'));
+            fputcsv($handler, array('Url:******'));
 
             foreach ($links as $item) {
                 fputcsv($handler, array($item[1]), ';');
@@ -112,7 +109,7 @@ class Parser
 
         if (is_array($img)) {
             $handler = fopen("result/" . "{$this->filename}" . ".csv", 'a');
-            fputcsv($handler, array('Image :'));
+            fputcsv($handler, array('Image :*********'));
 
             foreach ($img[0] as $item) {
                 fputcsv($handler, array($item), ';');
@@ -125,5 +122,3 @@ class Parser
 
 }
 
-$obj = new Parser('https://football.ua');
-$obj->saveParseUrl();
