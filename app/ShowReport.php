@@ -36,6 +36,13 @@ class ShowReport
     }
 
     /**
+     * @return mixed
+     */
+    public function getFilename()
+    {
+        return $this->filename;
+    }
+    /**
      * @return string
      *
      * Tho method open report file

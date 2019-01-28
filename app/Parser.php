@@ -66,7 +66,7 @@ class Parser
         preg_match_all('#((http(s)?(\:\/\/))+(www\.)?([\w\-\.\/])*(\.[a-zA-Z]{2,3}\/?))[^\s\b\n|]*[^.,;:\?\!\@\^\$ -]#', $this->data, $links, PREG_SET_ORDER);
 
         if (is_array($links)) {
-            $handler = fopen("result/" . "{$this->filename}" . ".csv", 'a');
+            $handler = fopen("result/{$this->filename}.csv", 'a');
             fputcsv($handler, array('Url:******'),';');
 
             foreach ($links as $item) {
@@ -89,7 +89,7 @@ class Parser
         preg_match_all('~(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)~', $this->data, $img);
 
         if (is_array($img)) {
-            $handler = fopen("result/" . "{$this->filename}" . ".csv", 'a');
+            $handler = fopen("result/{$this->filename}.csv", 'a');
             fputcsv($handler, array('Image :*********'),';');
 
             foreach ($img[0] as $item) {
@@ -98,7 +98,7 @@ class Parser
 
             fclose($handler);
         }
-        return "result/" . "{$this->filename}" . ".csv";
+        return "result/{$this->filename}.csv";
     }
 
 }

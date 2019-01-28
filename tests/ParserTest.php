@@ -12,35 +12,28 @@ use PHPUnit\Framework\TestCase;
 
 class ParserTest extends TestCase
 {
+    private $instance;
+
+    public function setUp()
+    {
+        $this->instance = new Parser('php.net');
+    }
 
     public function testSaveParseUrl()
     {
-        $strReg='~((http(s)?(\:\/\/))+(www\.)?([\w\-\.\/])*(\.[a-zA-Z]{2,3}\/?))[^\s\b\n|]*[^.,;:\?\!\@\^\$ -]~';
-        $this->assertRegExp('/baz/','baza');
+        $this->assertFileExists($this->instance->saveParseUrl());
     }
 
-    public function testGetDomain()
-    {
-
-    }
 
     public function testSaveParseImageUrl()
     {
-
+        $this->assertTrue(true);
     }
 
     public function testGetContent()
     {
-        $instanse=new Parser();
+        $this->assertIsString($this->instance->getContent());
     }
 
-    public function testCheck()
-    {
 
-    }
-
-    public function test__construct()
-    {
-
-    }
 }

@@ -12,24 +12,16 @@ use PHPUnit\Framework\TestCase;
 
 class ShowReportTest extends TestCase
 {
+    protected $instance;
 
-    public function test__construct()
+    public function setUp()
     {
-
+        $this->instance=new ShowReport('https://football.ua');
     }
 
-    public function testGetDomain()
-    {
-
-    }
-
-    public function testCheck()
-    {
-
-    }
 
     public function testReport()
     {
-        $this->assertFileIsReadable('result/dumskaya_net.csv');
+        $this->assertFileExists('result/'.$this->instance->getFilename().'.csv');
     }
 }
