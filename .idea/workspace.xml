@@ -2,13 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="44b8af91-4d01-4da6-9fe6-9f54fa983636" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Content.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/GetFilename.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/car.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Parser.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Parser.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/ShowReport.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/ShowReport.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/CommanderTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/ParserTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/ParserTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/ShowReportTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/ShowReportTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/ParserTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/ShowReportTest.php" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,20 +29,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Parser.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Parser.php">
+      <file leaf-file-name="CheckDomain.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/CheckDomain.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="232">
+              <caret line="43" selection-start-line="43" selection-start-column="2" selection-end-line="44" selection-end-column="31" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Commander.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Commander.php">
+      <file leaf-file-name="CheckDomainTest.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/CheckDomainTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+            <state relative-caret-position="135">
+              <caret line="29" column="32" lean-forward="true" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Parser.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Parser.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="88" column="70" lean-forward="true" selection-start-line="88" selection-start-column="24" selection-end-line="88" selection-end-column="70" />
             </state>
           </provider>
         </entry>
@@ -48,53 +59,62 @@
       <file leaf-file-name="ShowReport.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/ShowReport.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+            <state relative-caret-position="324">
+              <caret line="69" column="7" lean-forward="true" selection-start-line="69" selection-start-column="7" selection-end-line="69" selection-end-column="7" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dou_ua.csv" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/result/dou_ua.csv">
+      <file leaf-file-name="ContentRepository.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/ContentRepository.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="344" column="47" lean-forward="true" selection-start-line="344" selection-end-line="345" />
+            <state relative-caret-position="310">
+              <caret line="35" column="5" lean-forward="true" selection-start-line="20" selection-start-column="4" selection-end-line="35" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="auto_ria_com.csv" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/result/auto_ria_com.csv">
+      <file leaf-file-name="ImageRepository.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/ImageRepository.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="32445">
-              <caret line="2163" column="73" lean-forward="true" selection-start-line="2163" selection-start-column="73" selection-end-line="2163" selection-end-column="73" />
+            <state relative-caret-position="90">
+              <caret line="27" column="30" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CheckDomain.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/CheckDomain.php">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="23" column="18" lean-forward="true" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
+            <state relative-caret-position="90">
+              <caret line="6" column="54" selection-start-line="6" selection-start-column="54" selection-end-line="6" selection-end-column="54" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ParserTest.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/ParserTest.php">
+      <file leaf-file-name="car.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/car.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
-              <caret line="28" column="5" lean-forward="true" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+            <state relative-caret-position="60">
+              <caret line="4" column="8" lean-forward="true" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ShowReportTest.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/ShowReportTest.php">
+      <file leaf-file-name="CheckDomainInterface.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/CheckDomainInterface.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+            <state relative-caret-position="150">
+              <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CheckFilenameInterface.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/CheckFilenameInterface.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -107,12 +127,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Command.php" />
-        <option value="$PROJECT_DIR$/SaveFile.php" />
-        <option value="$PROJECT_DIR$/Commander.php" />
-        <option value="$PROJECT_DIR$/parse.php" />
-        <option value="$PROJECT_DIR$/Commander1.php" />
-        <option value="$PROJECT_DIR$/one.csv" />
         <option value="$PROJECT_DIR$/showUrl.php" />
         <option value="$PROJECT_DIR$/src/one.csv" />
         <option value="$PROJECT_DIR$/index2.php" />
@@ -146,13 +160,24 @@
         <option value="$PROJECT_DIR$/app/CheckUrl.php" />
         <option value="$PROJECT_DIR$/indexPREG.php" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/app/CheckDomain.php" />
         <option value="$PROJECT_DIR$/app/Commander.php" />
         <option value="$PROJECT_DIR$/app/Parser.php" />
         <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/app/ShowReport.php" />
         <option value="$PROJECT_DIR$/tests/ShowReportTest.php" />
         <option value="$PROJECT_DIR$/tests/ParserTest.php" />
+        <option value="$PROJECT_DIR$/app/First.php" />
+        <option value="$PROJECT_DIR$/app/ContentRepository.php" />
+        <option value="$PROJECT_DIR$/app/ChecFileNameInterface.php" />
+        <option value="$PROJECT_DIR$/app/ChecFilenameInterface.php" />
+        <option value="$PROJECT_DIR$/app/CheckFilenameInterface.php" />
+        <option value="$PROJECT_DIR$/app/CheckDomainInterface.php" />
+        <option value="$PROJECT_DIR$/app/ShowReport.php" />
+        <option value="$PROJECT_DIR$/app/Content.php" />
+        <option value="$PROJECT_DIR$/app/GetFilename.php" />
+        <option value="$PROJECT_DIR$/tests/CheckDomainTest.php" />
+        <option value="$PROJECT_DIR$/app/CheckDomain.php" />
+        <option value="$PROJECT_DIR$/app/ImageRepository.php" />
+        <option value="$PROJECT_DIR$/car.php" />
       </list>
     </option>
   </component>
@@ -218,16 +243,6 @@
             <path>
               <item name="Project1" type="b2602c69:ProjectViewProjectNode" />
               <item name="Project1" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Project1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Project1" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Project1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Project1" type="462c0819:PsiDirectoryNode" />
-              <item name="result" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -300,6 +315,9 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="StructureViewFactory">
+    <option name="ACTIVE_ACTIONS" value=",SHOW_INHERITED" />
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -318,7 +336,10 @@
       <workItem from="1547208032390" duration="4768000" />
       <workItem from="1547470315841" duration="23606000" />
       <workItem from="1547797950655" duration="19919000" />
-      <workItem from="1548250048110" duration="36580000" />
+      <workItem from="1548250048110" duration="37723000" />
+      <workItem from="1553502700697" duration="2065000" />
+      <workItem from="1553609181366" duration="7691000" />
+      <workItem from="1554111314589" duration="23794000" />
     </task>
     <task id="LOCAL-00001" summary="1(Commander + Parse(img+url))">
       <created>1544708914344</created>
@@ -369,7 +390,14 @@
       <option name="project" value="LOCAL" />
       <updated>1548409956917</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Finish">
+      <created>1548684859638</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1548684859638</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -405,7 +433,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="255215000" />
+    <option name="totallyTimeSpent" value="289908000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -419,27 +447,27 @@
   <component name="ToolWindowManager">
     <frame x="-1" y="0" width="1368" height="741" extended-state="6" />
     <layout>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7677262" visible="true" weight="0.19318181" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4969697" weight="0.32840723" />
-      <window_info anchor="bottom" id="PHP-CGI Server" order="7" sideWeight="0.4939394" weight="0.32840723" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.16287878" side_tool="true" visible="true" weight="0.3218391" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4969697" weight="0.32840723" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4780303" weight="0.32840723" />
-      <window_info anchor="right" id="Coverage" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.8371212" visible="true" weight="0.3218391" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2840909" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.16363636" side_tool="true" weight="0.32131147" />
       <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4969697" weight="0.32840723" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="7" sideWeight="0.4969697" visible="true" weight="0.32840723" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4780303" weight="0.32840723" />
+      <window_info id="Structure" order="1" sideWeight="0.23227383" side_tool="true" visible="true" weight="0.19318181" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.8363636" weight="0.35632184" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="PHP-CGI Server" order="7" sideWeight="0.4939394" weight="0.32840723" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4969697" weight="0.32840723" />
+      <window_info anchor="right" id="Coverage" order="3" side_tool="true" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -454,11 +482,11 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1(Commander + Parse(img+url))" />
     <MESSAGE value="Ready 90%" />
-    <MESSAGE value="Finish" />
     <MESSAGE value="New parse for url and image" />
     <MESSAGE value="Finish or maybe finish" />
     <MESSAGE value="Finish without test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finish without test" />
+    <MESSAGE value="Finish" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finish" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -466,17 +494,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/result/culturemeter_od_ua.csv" />
-    <entry file="file://$PROJECT_DIR$/result/texnomaniya_ru.csv" />
-    <entry file="file://$PROJECT_DIR$/result/toster_ru.csv" />
-    <entry file="file://$PROJECT_DIR$/result/getjump.github.io.csv" />
-    <entry file="file://$PROJECT_DIR$/result/getjump_github_io.csv" />
-    <entry file="file://$PROJECT_DIR$/result/habr.com.csv" />
-    <entry file="file://$PROJECT_DIR$/result/chudo-udo_info.csv" />
-    <entry file="file://$PROJECT_DIR$/result/igraem_pro.csv" />
-    <entry file="file://$PROJECT_DIR$/result/laravel-news_ru.csv" />
-    <entry file="file://$PROJECT_DIR$/result/ukr_net.csv" />
-    <entry file="file://$PROJECT_DIR$/neo.xml" />
     <entry file="file://$PROJECT_DIR$/month.txt" />
     <entry file="file://$PROJECT_DIR$/second.php" />
     <entry file="file://$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/TestCase.php">
@@ -511,51 +528,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/result/helllo_com.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/result/sport_ua.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/i.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="20" lean-forward="true" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/AddTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-          <folding>
-            <element signature="e#119#150#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/result/hell.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/result/3dnews_ru.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="45" column="18" lean-forward="true" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/result/helllo_com.csv" />
+    <entry file="file://$PROJECT_DIR$/result/sport_ua.csv" />
+    <entry file="file://$PROJECT_DIR$/i.php" />
+    <entry file="file://$PROJECT_DIR$/tests/AddTest.php" />
+    <entry file="file://$PROJECT_DIR$/result/hell.csv" />
+    <entry file="file://$PROJECT_DIR$/result/3dnews_ru.csv" />
     <entry file="file://$PROJECT_DIR$/composer.lock">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-21748" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/result/segodnya_ua.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="36" selection-start-line="2" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/result/segodnya_ua.csv" />
     <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -563,13 +547,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/indexPREG.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/indexPREG.php" />
     <entry file="file://$PROJECT_DIR$/result/dumskaya_net.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-207" />
@@ -585,13 +563,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/CheckUrl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="8" column="19" lean-forward="true" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/CheckUrl.php" />
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -607,59 +579,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
+    <entry file="file://$PROJECT_DIR$/tests/CommanderTest.php" />
+    <entry file="file://$PROJECT_DIR$/result/auto_ria_com.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="54" selection-start-line="6" selection-start-column="54" selection-end-line="6" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/CommanderTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/ShowReportTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Parser.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/ParserTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="28" column="5" lean-forward="true" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/CheckDomain.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="23" column="18" lean-forward="true" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Commander.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/ShowReport.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+        <state relative-caret-position="32445">
+          <caret line="2163" column="73" lean-forward="true" selection-start-line="2163" selection-start-column="73" selection-end-line="2163" selection-end-column="73" />
         </state>
       </provider>
     </entry>
@@ -670,10 +594,129 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/result/auto_ria_com.csv">
+    <entry file="file://$PROJECT_DIR$/tests/ParserTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32445">
-          <caret line="2163" column="73" lean-forward="true" selection-start-line="2163" selection-start-column="73" selection-end-line="2163" selection-end-column="73" />
+        <state relative-caret-position="301">
+          <caret line="28" column="5" lean-forward="true" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/ShowReportTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/result/test.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="48" lean-forward="true" selection-start-line="6" selection-start-column="48" selection-end-line="6" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/CheckFileName.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Commander.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="23" column="42" selection-start-line="23" selection-start-column="42" selection-end-line="23" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/First.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="77">
+          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Content.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/GetFilename.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/CheckFilenameInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/ShowReport.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="69" column="7" lean-forward="true" selection-start-line="69" selection-start-column="7" selection-end-line="69" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/CheckDomainInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/CheckDomain.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="43" selection-start-line="43" selection-start-column="2" selection-end-line="44" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/CheckDomainTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="29" column="32" lean-forward="true" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Parser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="88" column="70" lean-forward="true" selection-start-line="88" selection-start-column="24" selection-end-line="88" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/ContentRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="35" column="5" lean-forward="true" selection-start-line="20" selection-start-column="4" selection-end-line="35" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/ImageRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="27" column="30" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="54" selection-start-line="6" selection-start-column="54" selection-end-line="6" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/car.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="8" lean-forward="true" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
         </state>
       </provider>
     </entry>

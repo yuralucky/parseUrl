@@ -10,7 +10,7 @@
           <entry key="diagnose_from_ComposerEditorNotificationPanel.ExtraActions" value="2" />
           <entry key="diagnose_from_MainMenu" value="1" />
           <entry key="dump-autoload_from_ComposerEditorNotificationPanel.ExtraActions" value="11" />
-          <entry key="dump-autoload_from_MainMenu" value="1" />
+          <entry key="dump-autoload_from_MainMenu" value="2" />
           <entry key="install_from_ComposerEditorNotificationPanel" value="1" />
           <entry key="licenses_from_ComposerEditorNotificationPanel.ExtraActions" value="2" />
           <entry key="remove_from_AddDependencyDialog" value="1" />
@@ -25,7 +25,7 @@
       </usages-collector>
       <usages-collector id="statistics.php.composer.command.options">
         <counts>
-          <entry key="dump-autoload_with_--ansi_--classmap-authoritative_--no-interaction_--verbose" value="8" />
+          <entry key="dump-autoload_with_--ansi_--classmap-authoritative_--no-interaction_--verbose" value="9" />
           <entry key="dump-autoload_with_--ansi_--no-interaction_--optimize_--verbose" value="1" />
           <entry key="dump-autoload_with_--ansi_--no-interaction_--verbose" value="3" />
           <entry key="remove_with_--ansi_--no-interaction_--no-progress.default" value="1" />
