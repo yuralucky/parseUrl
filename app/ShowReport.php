@@ -7,46 +7,9 @@
  */
 
 namespace Project1;
+include 'CheckDomain.php';
 
-interface CheckFilenameInterface
-{
-    public function getFileName();
-
-}
-
-class CheckDomain
-{
-
-    private $url;
-
-    public function __construct($url)
-    {
-        $this->url = $url;
-
-    }
-
-    /**
-     * @param $url
-     * @return string
-     */
-    public function check(): string
-    {
-        return strpos($this->url, 'http') === false ? "https://{$this->url}" : $this->url;
-    }
-
-    /**
-     * @param $url
-     * @return mixed|string
-     */
-    public function getDomain(): string
-    {
-        return parse_url($this->check(), PHP_URL_HOST);
-    }
-
-
-}
-
-class ShowReport implements CheckFilenameInterface
+class ShowReport
 {
 
     /**
@@ -63,16 +26,7 @@ class ShowReport implements CheckFilenameInterface
     public function __construct(CheckDomain $url)
     {
         $this->url = $url;
-        $this->filename=$this->getFilename();
 
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getFilename()
-    {
-        return $this->filename;
     }
 
     /**
@@ -82,12 +36,12 @@ class ShowReport implements CheckFilenameInterface
      */
     public function showReport()
     {
-        $handle = fopen("result/{$this->filename}.csv", 'r');
+        $handle = fopen("result/test.csv", 'r');
         if ($handle !== false) {
             while (($data = fgetcsv($handle, 1000)) !== false) {
                 $num = count($data);
                 for ($i = 0; $i < $num; $i++) {
-                    echo $data[$i];
+                    echo $data[$i]."_________________________";
                 }
             }
         } else {
@@ -103,6 +57,6 @@ class ShowReport implements CheckFilenameInterface
 
 $url=new CheckDomain('football.ua');
 $report=new ShowReport($url);
-print $report->getFilename();
+print $report->showReport();
 
 

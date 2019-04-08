@@ -8,13 +8,22 @@
 
 namespace Project1;
 
-
+include 'CheckFilenameInterface.php';
+include 'CheckDomain.php';
 
 class GetFilename implements CheckFilenameInterface
 {
+
+    private $url;
+
+    public function __construct(CheckDomain $url)
+    {
+        $this->url=$url;
+    }
+
     public function getHost()
     {
-        return parse_url('https://football.ua',PHP_URL_HOST);
+        return parse_url($this->url->getRightUrl(),PHP_URL_HOST);
     }
 
     public function getFileName()
@@ -24,6 +33,7 @@ class GetFilename implements CheckFilenameInterface
     }
 
 }
+$obj = new CheckDomain('https://www.6pm.com/');
 
-$obj=new GetFilename();
+$obj=new GetFilename($obj);
 print $obj->getFileName();

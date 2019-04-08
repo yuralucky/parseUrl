@@ -24,7 +24,7 @@ class CheckDomain implements CheckDomainInterface
      * @param $url
      * @return string
      */
-    public function checkUrl(): string
+    public function getRightUrl(): string
     {
         return strpos($this->url, 'http') === false ? "https://{$this->url}" : $this->url;
     }
@@ -35,11 +35,11 @@ class CheckDomain implements CheckDomainInterface
      */
     public function getDomain(): string
     {
-        return parse_url($this->checkUrl(), PHP_URL_HOST);
+        return parse_url($this->getRightUrl(), PHP_URL_HOST);
     }
 
 
 }
 
-//$obj = new CheckDomain('https://www.6pm.com/');
-//var_dump( $obj->getDomain());
+$obj = new CheckDomain('https://www.6pm.com/');
+var_dump( $obj->getRightUrl());

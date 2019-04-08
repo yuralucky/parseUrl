@@ -2,9 +2,11 @@
 $content = 5;
 
 try {
-    if (is_string($content))
+    if (5 == 8){
+        print 'Yes';
+    }
+//        throw new Exception('not');
 
-        echo 'nor';
 } catch (Exception $exception) {
-    throw new Exception('not');
+    throw new Exception('Ni');
 }

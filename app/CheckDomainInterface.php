@@ -11,6 +11,6 @@ namespace Project1;
 
 interface CheckDomainInterface
 {
-    public function checkUrl();
+    public function getRightUrl();
 
 }

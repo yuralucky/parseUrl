@@ -7,7 +7,7 @@
  */
 
 namespace Project1;
-
+include 'CheckDomain.php';
 
 class Content
 {
@@ -19,19 +19,13 @@ class Content
         $this->url = $url;
     }
 
-    public function getContent()
+    public function getContent(): string
     {
 
-        try {
-            return file_get_contents($this->url->checkUrl(), false);
-        } catch (\Exception $e) {
-            throw new Exception('Problem with parse url');
-        }
-
+        return file_get_contents($this->url->getRightUrl(), false);
     }
 }
-
-$url = new CheckDomain('duskaya.net/');
+$url = new CheckDomain('https://dumskaya.net/');
 
 $obj = new Content($url);
 
