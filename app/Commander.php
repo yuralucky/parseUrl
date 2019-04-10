@@ -7,6 +7,7 @@
  */
 
 namespace Project1;
+require_once 'vendor/autoload.php';
 
 class Commander
 {
@@ -20,22 +21,38 @@ class Commander
 
 
             case "parse":
-                $obj = new Parser($option['parse']);
-                $obj->saveParseImageUrl();
-                echo $obj->saveParseUrl();
+                echo $option['report'];
+//                $obj = new Parser($option['parse']);
+//                $obj->saveParseImageUrl();
+//                echo $obj->saveParseUrl();
                 break;
 
             case "report":
-                $report = new ShowReport($option['report']);
-                echo $report->report();
+//                echo $option['report'];
+//                break;
+                $url = new CheckDomain($option['report']);
+                $file = new GetFilename($url);
+//                echo $file->getFileName();
+               $report = new ShowReport($file);
+                 $report->showReport();
                 break;
 
             case "help" || "h":
             default:
-                echo 'Hi. To parse any resource in cli, enter php index.php --parse <your resource>.
-                        To display information in cli, enter php index.php --report <your resource>';
+                echo '_____________Hello friend_______________. 
+If you want to parse any resource in CLI,
+enter php index.php --parse <your resource>.
+To display information in cli, 
+enter php index.php --report <your resource>
+_'
+                ;
         }
     }
 
 }
 
+$option = getopt('h', ['parse:', 'report:', 'help:']);
+$start = new Commander($option);
+//$obj=new CheckDomain('ukr.net');
+//print $obj->getRightUrl();
+//var_dump($start['parse']);

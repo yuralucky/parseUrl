@@ -8,32 +8,40 @@
 
 namespace Project1;
 
-include 'CheckFilenameInterface.php';
-include 'CheckDomain.php';
 
-class GetFilename implements CheckFilenameInterface
+class GetFilename implements GetFilenameInterface
 {
 
     private $url;
 
+    /**
+     * GetFilename constructor.
+     * @param CheckDomain $url
+     */
     public function __construct(CheckDomain $url)
     {
-        $this->url=$url;
+        $this->url = $url;
     }
 
-    public function getHost()
+    /**
+     * @return string
+     */
+    public function getHost(): string
     {
-        return parse_url($this->url->getRightUrl(),PHP_URL_HOST);
+        return parse_url($this->url->getRightUrl(), PHP_URL_HOST);
     }
 
-    public function getFileName()
+    /**
+     * @return string
+     */
+    public function getFileName(): string
     {
-       $filename= str_replace('.', '_', $this->getHost());
-       return $filename.'.csv';
+        $filename = str_replace('.', '_', $this->getHost());
+        return $filename . '.csv';
     }
 
 }
-$obj = new CheckDomain('https://www.6pm.com/');
-
-$obj=new GetFilename($obj);
-print $obj->getFileName();
+//$obj = new CheckDomain('https://www.6pm.com/');
+//
+//$obj=new GetFilename($obj);
+//print $obj->getFileName();

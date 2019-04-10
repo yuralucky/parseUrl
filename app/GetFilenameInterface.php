@@ -9,8 +9,8 @@
 namespace Project1;
 
 
-interface CheckFilenameInterface
+interface GetFilenameInterface
 {
-    public function getFileName();
+    public function getFilename();
 
 }

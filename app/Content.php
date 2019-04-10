@@ -7,14 +7,13 @@
  */
 
 namespace Project1;
-include 'CheckDomain.php';
 
 class Content
 {
 
     private $url;
 
-    public function __construct(CheckDomain $url)
+    public function __construct(CheckDomainInterface $url)
     {
         $this->url = $url;
     }
@@ -25,11 +24,13 @@ class Content
         return file_get_contents($this->url->getRightUrl(), false);
     }
 }
-$url = new CheckDomain('https://dumskaya.net/');
+//$url = new CheckDomain('https://dumskaya.net/');
+////
+//$obj = new Content($url);
 
-$obj = new Content($url);
-
-print_r($obj->getContent());
-echo "<br>";
+//var_dump($obj);
+//
+//print_r($obj->getContent());
+//echo "<br>";
 
 //print_r($obj->getContent());

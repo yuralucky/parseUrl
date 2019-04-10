@@ -7,7 +7,7 @@
  */
 
 namespace Project1;
-include 'CheckDomainInterface.php';
+
 
 class CheckDomain implements CheckDomainInterface
 {
@@ -21,17 +21,8 @@ class CheckDomain implements CheckDomainInterface
     }
 
     /**
-     * @param $url
-     * @return string
-     */
-    public function getRightUrl(): string
-    {
-        return strpos($this->url, 'http') === false ? "https://{$this->url}" : $this->url;
-    }
-
-    /**
-     * @param $url
      * @return mixed|string
+     *
      */
     public function getDomain(): string
     {
@@ -39,7 +30,14 @@ class CheckDomain implements CheckDomainInterface
     }
 
 
+    /**
+     * @return string
+     */
+    public function getRightUrl(): string
+    {
+        return strpos($this->url, 'http') === false ? "https://{$this->url}" : $this->url;
+    }
+
+
 }
 
-$obj = new CheckDomain('https://www.6pm.com/');
-var_dump( $obj->getRightUrl());
