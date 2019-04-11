@@ -4,12 +4,15 @@ namespace Project1;
 require_once 'vendor/autoload.php';
 
 $option = getopt('h', ['parse:', 'report:', 'help:']);
-//$start = new Commander($option);
-$url = new CheckDomain('habr.com');
-$content=new Content($url);
-$filename=new GetFilename($url);
-$object=new ContentRepository($content,$filename);
-var_dump($object);
+$start = new Commander($option);
+//$url = new CheckDomain('https://auto.ria.com/uk/');
+//$content=new Content($url);
+//$filename=new GetFilename($url);
+//$object=new ContentRepository($content,$filename);
+////print_r( $object->getFilename());
+//
+//
+//$object->saveParseUrl();
 
 //$url = new CheckDomain('habr.com');
 //print_r( $url->getDomain());

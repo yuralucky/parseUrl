@@ -24,13 +24,3 @@ class Content
         return file_get_contents($this->url->getRightUrl(), false);
     }
 }
-//$url = new CheckDomain('https://dumskaya.net/');
-////
-//$obj = new Content($url);
-
-//var_dump($obj);
-//
-//print_r($obj->getContent());
-//echo "<br>";
-
-//print_r($obj->getContent());

@@ -21,20 +21,21 @@ class Commander
 
 
             case "parse":
-                echo $option['report'];
-//                $obj = new Parser($option['parse']);
-//                $obj->saveParseImageUrl();
-//                echo $obj->saveParseUrl();
+                $url = new CheckDomain($option['parse']);
+                $content = new Content($url);
+                $filename = new GetFilename($url);
+                $object = new ContentRepository($content, $filename);
+                $object->saveParseUrl();
+                $object->saveParseImageUrl();
+                print $object->getCsv();
                 break;
 
             case "report":
-//                echo $option['report'];
-//                break;
                 $url = new CheckDomain($option['report']);
+                print_r($url->getDomain());
                 $file = new GetFilename($url);
-//                echo $file->getFileName();
-               $report = new ShowReport($file);
-                 $report->showReport();
+                $report = new ShowReport($file);
+                $report->showReport();
                 break;
 
             case "help" || "h":
@@ -44,15 +45,9 @@ If you want to parse any resource in CLI,
 enter php index.php --parse <your resource>.
 To display information in cli, 
 enter php index.php --report <your resource>
-_'
-                ;
+_';
         }
     }
 
 }
 
-$option = getopt('h', ['parse:', 'report:', 'help:']);
-$start = new Commander($option);
-//$obj=new CheckDomain('ukr.net');
-//print $obj->getRightUrl();
-//var_dump($start['parse']);

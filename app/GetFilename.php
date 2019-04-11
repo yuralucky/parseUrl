@@ -25,6 +25,8 @@ class GetFilename implements GetFilenameInterface
 
     /**
      * @return string
+     *
+     * return host
      */
     public function getHost(): string
     {
@@ -33,6 +35,8 @@ class GetFilename implements GetFilenameInterface
 
     /**
      * @return string
+     *
+     * return right csv filename
      */
     public function getFileName(): string
     {
@@ -41,7 +45,3 @@ class GetFilename implements GetFilenameInterface
     }
 
 }
-//$obj = new CheckDomain('https://www.6pm.com/');
-//
-//$obj=new GetFilename($obj);
-//print $obj->getFileName();
