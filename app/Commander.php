@@ -7,7 +7,7 @@
  */
 
 namespace Project1;
-require_once 'vendor/autoload.php';
+
 
 class Commander
 {

@@ -32,6 +32,8 @@ class CheckDomain implements CheckDomainInterface
 
     /**
      * @return string
+     *
+     * return valid Url
      */
     public function getRightUrl(): string
     {

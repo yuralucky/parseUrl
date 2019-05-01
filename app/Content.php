@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: yura
- * Date: 01.04.19
- * Time: 12:47
- */
+
 
 namespace Project1;
 
@@ -13,14 +8,24 @@ class Content
 
     private $url;
 
-    public function __construct(CheckDomainInterface $url)
+    /**
+     * Content constructor.
+     * @param CheckDomain $url
+     */
+    public function __construct(CheckDomain $url)
     {
         $this->url = $url;
     }
 
+    /**
+     * @return string
+     *
+     * get content from URL
+     */
     public function getContent(): string
     {
+        $content = file_get_contents($this->url->getRightUrl(), false);
 
-        return file_get_contents($this->url->getRightUrl(), false);
+        return $content;
     }
 }

@@ -31,11 +31,11 @@ class ShowReport
     /**
      * @return string
      *
-     * Tho method open report file
+     *   Output report file
      */
     public function showReport()
     {
-        $handle = fopen("result/{$this->url->getFileName()}", 'r');
+        $handle = fopen($this->getPathFile(), 'r');
         if ($handle == false) {
             throw new \Exception('Sorry, enter right url');
         }
@@ -50,6 +50,10 @@ class ShowReport
         return '********The end';
     }
 
+    public function getPathFile()
+    {
+        return "result/".$this->url->getFileName();
+    }
 
 }
 

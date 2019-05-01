@@ -25,9 +25,14 @@ class ContentRepository
         $this->filename = $filename;
     }
 
+    /**
+     * @return string
+     *
+     * output filename
+     */
     public function getCsv()
     {
-        return $this->filename->getFileName();
+        return "Save all image and URL into-> {$this->filename->getFileName()}";
     }
 
 
@@ -38,20 +43,25 @@ class ContentRepository
      */
     public function saveParseUrl(): string
     {
-        preg_match_all
-        ('#((http(s)?(\:\/\/))+(www\.)?([\w\-\.\/])*(\.[a-zA-Z]{2,3}\/?))[^\s\b\n|]*[^.,;:\?\!\@\^\$ -]#',
-            $this->content->getContent(), $links, PREG_SET_ORDER);
+        if (empty($this->content->getContent())) {
+            throw  new \Exception('Unable to extract content. Enter the correct url');
 
-        if (is_array($links)) {
-            $handler = fopen("result/{$this->filename->getFileName()}", 'a');
-            fputcsv($handler, array('.......URL.......... '), ';');
+        } else {
+            preg_match_all
+            ('#((http(s)?(\:\/\/))+(www\.)?([\w\-\.\/])*(\.[a-zA-Z]{2,3}\/?))[^\s\b\n|]*[^.,;:\?\!\@\^\$ -]#',
+                $this->content->getContent(), $links, PREG_SET_ORDER);
 
-            foreach ($links as $item) {
-                fputcsv($handler, array($item[1]), ';');
+            if (is_array($links)) {
+                $handler = fopen("result/{$this->filename->getFileName()}", 'a');
+                fputcsv($handler, array('.......URL.......... '), ';');
+
+                foreach ($links as $item) {
+                    fputcsv($handler, array($item[1]), ';');
+                }
+                fclose($handler);
             }
-            fclose($handler);
         }
-        return "result/{$this->filename->getFileName()}";
+        return false;
 
     }
 
@@ -74,7 +84,7 @@ class ContentRepository
 
             fclose($handler);
         }
-        return "result/{$this->filename->getFileName()}";
+        return false;
     }
 
 }
